@@ -9,11 +9,11 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 
 
-app.get("manasrajowar66.github.io/newsletter-signup/",function(req,res){
+app.get("/",function(req,res){
   res.sendFile(__dirname+"/signup.html");
 });
 
-app.post("manasrajowar66.github.io/newsletter-signup/",function(req,res){
+app.post("/",function(req,res){
   var fname=req.body.firstName;
   var lname=req.body.lastName;
   var email=req.body.email;
@@ -47,7 +47,7 @@ app.post("manasrajowar66.github.io/newsletter-signup/",function(req,res){
 
 
 app.post("/failure",function(req,res){
-  res.redirect("manasrajowar66.github.io/newsletter-signup/");
+  res.redirect("/");
 });
 
 
